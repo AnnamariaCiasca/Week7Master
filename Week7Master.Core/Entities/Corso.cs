@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Week7Master.Core.Entities
+{
+    public class Corso
+    {
+        public string CodiceCorso { get; set; }
+        public string Nome { get; set; }
+        public string Descrizione { get; set; }
+
+        //FK
+        public List<Studente> Studenti { get; set; } = new List<Studente>();
+      
+        public List<Lezione> Lezioni { get; set; }
+
+        public override string ToString()
+        {
+            return $"Codice: {CodiceCorso}\t{Nome}\t{Descrizione} ";
+        }
+
+    }
+}
