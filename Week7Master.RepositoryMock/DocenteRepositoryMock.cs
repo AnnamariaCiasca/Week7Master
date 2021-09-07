@@ -12,22 +12,32 @@ namespace Week7Master.RepositoryMock
     {
         public static List<Docente> Docenti = new List<Docente>()
         {
-            new Docente{Id=1, Nome="Mario", Cognome="Rossi", Email="mario@mail.it", Telefono="3331234567"},
-            new Docente{Id=2, Nome="Giuseppe", Cognome="Bianchi", Email="giuseppe@mail.it", Telefono="3331434567"}
+            new Docente{Id=1, Nome="Michele", Cognome="Neri", Email="michele.neri@hotmail.it", Telefono="3456178231"},
+            new Docente{Id=2, Nome="Laura", Cognome="Verdi", Email="lauraverdi@virgilio.it", Telefono="3286543987"}
         };
         public Docente Add(Docente item)
         {
-            throw new NotImplementedException();
+            if (Docenti.Count == 0)
+            {
+                item.Id = 1;
+            }
+            else
+            {
+                item.Id = Docenti.Max(d => d.Id) + 1;
+            }
+            Docenti.Add(item);
+            return item;
         }
 
         public bool Delete(Docente item)
         {
-            throw new NotImplementedException();
+            Docenti.Remove(item);
+            return true;
         }
 
         public List<Docente> Fetch()
         {
-            throw new NotImplementedException();
+            return Docenti;
         }
 
         public Docente GetByEmail(string email)
@@ -37,12 +47,18 @@ namespace Week7Master.RepositoryMock
 
         public Docente GetById(int id)
         {
-            throw new NotImplementedException();
+            return Docenti.Find(d => d.Id == id);
         }
+
+        
 
         public Docente Update(Docente item)
         {
-            throw new NotImplementedException();
+            var old = Docenti.FirstOrDefault(d => d.Id == item.Id);
+            old.Email = item.Email;
+            old.Telefono = item.Telefono;
+
+            return item;
         }
     }
 }

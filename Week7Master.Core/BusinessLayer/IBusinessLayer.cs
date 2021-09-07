@@ -13,7 +13,7 @@ namespace Week7Master.Core.BusinessLayer
 
         #region Funzionalità Corsi
        //Visualizza corsi
-        public List<Corso> GetAllCorsi();
+        public List<Corso> FetchCorsi();
 
         public string InserisciNuovoCorso(Corso newCorso);
 
@@ -26,23 +26,47 @@ namespace Week7Master.Core.BusinessLayer
         #endregion
 
 
-        #region Funzionalità Lezioni
-
-
-        #endregion
-
-
-        #region Funzionalità Docenti
-
-
-        #endregion
 
 
         #region Funzionalità Studenti
 
-        public List<Studente> GetAllStudenti();
+        public List<Studente> FetchStudenti();
 
         public string InserisciNuovoStudente(Studente nuovoStudente);
+        public string EliminaStudente(int idStudenteDaEliminare);
+        public string ModificaStudente(int id, string nuovaEmail);
+
+        public List<Studente> GetStudentiByCodiceCorso(string codiceCorso);
+
+
+        #endregion
+
+
+
+        #region Funzionalità Docenti
+
+        public List<Docente> FetchDocenti();
+
+        public string InserisciNuovoDocente(Docente nuovoDocente);
+        public string EliminaDocente(int idDocenteDaEliminare);
+        public string ModificaDocente(int id, string nuovaEmail, string nuovoTelefono);
+
+
+
+        #endregion
+
+
+        #region Funzionalità Lezioni
+
+        public List<Lezione> FetchLezioni();
+
+        public string InserisciNuovaLezione(Lezione nuovaLezionw);
+        public string EliminaLezione(int idLezioneDaEliminare);
+        public string ModificaLezione(int id, string nuovaAula);
+        public Lezione RicercaLezionePerCodiceCorso(string codiceCorso);
+        public Lezione RicercaLezionePerNomeCorso(string nomeCorso);
+
+
 
         #endregion
     }

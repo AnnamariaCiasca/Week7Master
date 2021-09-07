@@ -14,9 +14,10 @@ namespace Week7Master.Core.Entities
 
         //FK
         public List<Studente> Studenti { get; set; } = new List<Studente>();
-      
-        public List<Lezione> Lezioni { get; set; }
 
+        public List<Lezione> Lezioni { get; set; } = new List<Lezione>();
+
+   
         public override string ToString()
         {
             return $"Codice: {CodiceCorso}\t{Nome}\t{Descrizione} ";

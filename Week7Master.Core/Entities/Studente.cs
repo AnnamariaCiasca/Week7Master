@@ -15,7 +15,7 @@ namespace Week7Master.Core.Entities
         public string CodiceCorso { get; set; }
         public Corso Corso { get; set; }
 
-
+    
         public override string ToString()
         {
             return $"Studente: {Id}\t{Nome}\t{Cognome}\tnato il: {DataNascita.ToShortDateString()}\tEmail: {Email}\tTitolo: {Titolo} ";

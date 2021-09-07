@@ -10,7 +10,12 @@ namespace Week7Master.RepositoryMock
 {
     public class StudenteRepositoryMock : IStudenteRepository
     {
-        public static List<Studente> Studenti = new List<Studente>();
+        public static List<Studente> Studenti = new List<Studente>()
+        {
+            new Studente{Id=1, Nome = "Mario", Cognome = "Rossi", DataNascita = new DateTime(1995,06,08), Email = "mario.rossi@hotmail.it", Titolo = "Laurea Triennale", Corso = new Corso(), CodiceCorso = "C-01" },
+         
+
+        };
         public Studente Add(Studente item)
         {
             if (Studenti.Count == 0)
@@ -32,7 +37,8 @@ namespace Week7Master.RepositoryMock
 
         public bool Delete(Studente item)
         {
-            throw new NotImplementedException();
+            Studenti.Remove(item);
+            return true;
         }
 
         public List<Studente> Fetch()
@@ -42,12 +48,15 @@ namespace Week7Master.RepositoryMock
 
         public Studente GetById(int id)
         {
-            throw new NotImplementedException();
+            return Studenti.Find(s => s.Id == id);
         }
 
         public Studente Update(Studente item)
         {
-            throw new NotImplementedException();
+            var old = Studenti.FirstOrDefault(s => s.Id == item.Id);
+            old.Email = item.Email;
+            
+            return item;
         }
     }
 }
