@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using Week7Master.Core.Entities;
+using Week7Master.RepositoryEF.Configurations;
 
 namespace Week7Master.RepositoryEF
 {
@@ -19,7 +20,10 @@ namespace Week7Master.RepositoryEF
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+            modelBuilder.ApplyConfiguration<Corso>(new CorsoConfiguration());
+            modelBuilder.ApplyConfiguration<Studente>(new StudenteConfiguration());
+            modelBuilder.ApplyConfiguration<Docente>(new DocenteConfiguration());
+            modelBuilder.ApplyConfiguration<Lezione>(new LezioneConfiguration());
         }
 
     }

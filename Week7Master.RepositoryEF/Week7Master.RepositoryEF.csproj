@@ -18,11 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Configurations\" />
-    <Folder Include="RepositoriesEF\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Week7Master.Core\Week7Master.Core.csproj" />
   </ItemGroup>
 
