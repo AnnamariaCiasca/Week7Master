@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7Master", "Week7Master\Week7Master.csproj", "{9797D3B3-E124-43AC-B570-8F3355D8FD87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week7Master", "Week7Master\Week7Master.csproj", "{9797D3B3-E124-43AC-B570-8F3355D8FD87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7Master.Core", "Week7Master.Core\Week7Master.Core.csproj", "{23E751B5-0277-4D7D-A7F8-C54C5075ECCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week7Master.Core", "Week7Master.Core\Week7Master.Core.csproj", "{23E751B5-0277-4D7D-A7F8-C54C5075ECCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7Master.RepositoryMock", "Week7Master.RepositoryMock\Week7Master.RepositoryMock.csproj", "{7F32EC34-F6C9-4979-93D9-B50F00F2D661}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week7Master.RepositoryMock", "Week7Master.RepositoryMock\Week7Master.RepositoryMock.csproj", "{7F32EC34-F6C9-4979-93D9-B50F00F2D661}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7Master.RepositoryEF", "Week7Master.RepositoryEF\Week7Master.RepositoryEF.csproj", "{80809B58-7047-4B42-8F9D-682AB103C4FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week7Master.RepositoryEF", "Week7Master.RepositoryEF\Week7Master.RepositoryEF.csproj", "{80809B58-7047-4B42-8F9D-682AB103C4FC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week7Master.Test", "Week7Master.Test\Week7Master.Test.csproj", "{D3A39729-6601-4F3F-9EB7-1B368D458722}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7Master.MVC", "Week7Master.MVC\Week7Master.MVC.csproj", "{3C7B6E37-4545-4B79-94C6-23DD5F0D3C9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{80809B58-7047-4B42-8F9D-682AB103C4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80809B58-7047-4B42-8F9D-682AB103C4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80809B58-7047-4B42-8F9D-682AB103C4FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3A39729-6601-4F3F-9EB7-1B368D458722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3A39729-6601-4F3F-9EB7-1B368D458722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3A39729-6601-4F3F-9EB7-1B368D458722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3A39729-6601-4F3F-9EB7-1B368D458722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C7B6E37-4545-4B79-94C6-23DD5F0D3C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C7B6E37-4545-4B79-94C6-23DD5F0D3C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C7B6E37-4545-4B79-94C6-23DD5F0D3C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C7B6E37-4545-4B79-94C6-23DD5F0D3C9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

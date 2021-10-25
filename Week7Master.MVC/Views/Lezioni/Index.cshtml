@@ -1,0 +1,28 @@
+﻿<h1>Lezioni</h1>
+@model List<LezioneViewModel>
+<p>Ecco la Lista delle Lezioni</p>
+
+<table class="table table-hover table-bordered table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Data e Ora</th>
+            <th>Durata</th>
+            <th>Aula</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdLezione</td>
+                <td>@item.DataOraInizio</td>
+                <td>@item.Durata min</td>
+                <td>@item.Aula</td>
+
+            </tr>
+        }
+    </tbody>
+ 
+</table>

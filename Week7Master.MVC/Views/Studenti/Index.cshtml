@@ -1,0 +1,29 @@
+﻿<h1>Studenti</h1>
+@model List<StudenteViewModel>
+<p>Ecco la Lista degli Studenti</p>
+
+<table class="table table-hover table-bordered table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Data di Nascita</th>
+            <th>Email</th>
+            <th>Titolo</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nome</td>
+                <td>@item.Cognome</td>
+                <td>@item.DataNascita.ToShortDateString()</td>
+                <td>@item.Email</td>
+                <td>@item.Titolo</td>
+               
+            </tr>
+        }
+    </tbody>
+</table>
