@@ -42,6 +42,71 @@ namespace Week7Master.MVC.Controllers
 
             return View(docenteViewModel);
         }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult Create(DocenteViewModel docenteViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var docente = docenteViewModel.ToDocente();
+                BL.InserisciNuovoDocente(docente);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(docenteViewModel);
+        }
+
+
+        [HttpGet("Docenti/Update/{id}")]
+        public IActionResult Update(int id)
+        {
+            var docente = BL.FetchDocenti().FirstOrDefault(d => d.Id == id);
+            var docenteViewModel = docente.ToDocenteViewModel();
+
+            return View(docenteViewModel);
+        }
+
+
+        [HttpPost("Docenti/Update/{id}")]
+        public IActionResult Update(DocenteViewModel docenteViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var docente = docenteViewModel.ToDocente();
+                BL.ModificaDocente(docente.Id, docente.Email, docente.Telefono);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(docenteViewModel);
+        }
+
+
+        [HttpGet("Docenti/Delete/{id}")]
+        public IActionResult Delete(int id)
+        {
+            var docente = BL.FetchDocenti().FirstOrDefault(d => d.Id == id);
+            var docenteViewModel = docente.ToDocenteViewModel();
+            return View(docenteViewModel);
+        }
+
+        [HttpPost("Docenti/Delete/{id}")]
+        public IActionResult Delete(DocenteViewModel docenteViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var docente = docenteViewModel.ToDocente();
+                BL.EliminaDocente(docente.Id);
+                return RedirectToAction(nameof(Index));
+
+            }
+            return View(docenteViewModel);
+        }
     }
 
 }

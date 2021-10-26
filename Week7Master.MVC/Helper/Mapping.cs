@@ -67,7 +67,8 @@ namespace Week7Master.MVC.Helper
                 Cognome = studente.Cognome,
                 Email = studente.Email,
                 DataNascita = studente.DataNascita,
-                Titolo = studente.Titolo
+                Titolo = studente.Titolo,
+                CodiceCorso = studente.CodiceCorso
             };
         }
 
@@ -81,7 +82,8 @@ namespace Week7Master.MVC.Helper
                 Cognome = studenteViewModel.Cognome,
                 Email = studenteViewModel.Email,
                 DataNascita = studenteViewModel.DataNascita,
-                Titolo = studenteViewModel.Titolo
+                Titolo = studenteViewModel.Titolo,
+                CodiceCorso = studenteViewModel.CodiceCorso
             };
         }
 

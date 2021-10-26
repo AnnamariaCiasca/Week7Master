@@ -15,6 +15,7 @@ namespace Week7Master.Core.Entities
         public string CodiceCorso { get; set; }
         public Corso Corso { get; set; }
 
+
     
         public override string ToString()
         {
